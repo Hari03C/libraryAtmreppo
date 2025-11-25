@@ -1,0 +1,45 @@
+library = []
+
+while True:
+    print("\n===== LIBRARY MENU =====")
+    print("1. Add Book")
+    print("2. View Books")
+    print("3. Search Book")
+    print("4. Remove Book")
+    print("5. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        title = input("Enter title: ")
+        author = input("Enter author: ")
+        year = input("Enter year: ")
+        library.append({"title": title, "author": author, "year": year})
+        print("Book added successfully!")
+
+    elif choice == 2:
+        print("\n--- All Books ---")
+        for book in library:
+            print(book)
+
+    elif choice == 3:
+        search = input("Enter title to search: ")
+        found = False
+        for book in library:
+            if book["title"].lower() == search.lower():
+                print("Book found:", book)
+                found = True
+        if not found:
+            print("Book not found.")
+
+    elif choice == 4:
+        remove_title = input("Enter title to remove: ")
+        library = [b for b in library if b["title"].lower() != remove_title.lower()]
+        print("Book removed (if it existed).")
+
+    elif choice == 5:
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid choice")
