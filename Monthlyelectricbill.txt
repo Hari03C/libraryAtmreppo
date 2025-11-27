@@ -1,0 +1,19 @@
+units = []
+
+print("Enter electricity units for 6 months:")
+
+for i in range(1, 7):
+    u = int(input(f"Month {i} units: "))
+    units.append(u)
+
+total_units = sum(units)
+average_units = total_units / 6
+max_units = max(units)
+min_units = min(units)
+
+print("\n ANALYSIS REPORT")
+print("Monthly Units:", units)
+print("Total Units (6 Months):", total_units)
+print("Average Units per Month:", average_units)
+print("Highest Consumption:", max_units)
+print("Lowest Consumption:", min_units)

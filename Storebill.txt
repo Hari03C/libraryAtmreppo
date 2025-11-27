@@ -1,0 +1,43 @@
+items = {
+    "Rice": 60,
+    "Sugar": 40,
+    "Milk": 30,
+    "Oil": 120,
+    "Eggs": 6
+}
+
+cart = {}
+
+print("------ GROCERY STORE ------")
+print("\n Available Items:")
+for item, price in items.items():
+    print(f"{item} - ₹{price} per unit")
+
+while True:
+    choice = input("\n Do you want to buy something? (yes/no): ").lower()
+
+    if choice == "yes":
+        item_name = input("Enter item name: ")
+
+        if item_name in items:
+            qty = int(input("Enter quantity: "))
+            cart[item_name] = cart.get(item_name, 0) + qty
+            print("Added to cart!")
+        else:
+            print("Item not found!")
+
+    elif choice == "no":
+        break
+    else:
+        print("Invalid choice!")
+
+total = 0
+print("\n FINAL BILL")
+for item, qty in cart.items():
+    price = items[item]
+    amount = price * qty
+    total += amount
+    print(f"{item}  x {qty} = ₹{amount}")
+
+print("\n Total Amount to Pay: ₹", total)
+print("Thank you for shopping! Come Again")
