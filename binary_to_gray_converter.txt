@@ -1,0 +1,14 @@
+binary = input("Enter binary number: ")
+gray = binary[0]
+
+for i in range(1, len(binary)):
+    b1 = int(binary[i-1])
+    b2 = int(binary[i])
+
+    
+    if b1 == b2:
+        gray += "0"
+    else:
+        gray += "1"
+
+print("Gray Code:", gray)

@@ -1,0 +1,19 @@
+print("Simple Currency Converter")
+
+print("1. USD to INR")
+print("2. INR to USD")
+
+choice = input("Choose option (1 or 2): ")
+
+if choice == "1":
+    usd = float(input("Enter amount in USD: "))
+    inr = usd * 83.0   # sample conversion rate
+    print("Amount in INR =", inr)
+
+elif choice == "2":
+    inr = float(input("Enter amount in INR: "))
+    usd = inr / 83.0   # sample conversion rate
+    print("Amount in USD =", usd)
+
+else:
+    print("Invalid choice!")
