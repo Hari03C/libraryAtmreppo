@@ -1,0 +1,30 @@
+temperature = float(input("Enter today's temperature (°C): "))
+condition = input("Enter weather condition (sunny, rainy, cloudy, windy): ").lower()
+
+print("\nWeather Report")
+print(f"Temperature: {temperature}°C")
+print(f"Condition: {condition}")
+
+
+if temperature < 10:
+    print("It's very cold! Wear warm clothes.")
+elif 10 <= temperature < 20:
+    print("It's a bit cold. A jacket is recommended.")
+elif 20 <= temperature < 30:
+    print("Weather is pleasant today!")
+else:
+    print("It's hot outside! Stay hydrated.")
+
+
+if condition == "sunny":
+    print("Don't forget your sunglasses!")
+elif condition == "rainy":
+    print("Carry an umbrella, it might rain.")
+elif condition == "cloudy":
+    print("Sky is cloudy, but no rain expected.")
+elif condition == "windy":
+    print("It's windy, wear something to protect your ears.")
+else:
+    print("Unknown condition entered.")
+
+print("\n Have a great day!")
