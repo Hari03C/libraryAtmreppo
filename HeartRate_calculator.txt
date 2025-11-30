@@ -1,0 +1,8 @@
+age = int(input("Age: "))
+max_hr = 220 - age
+print("Max Heart Rate =", max_hr)
+low = max_hr * 0.5
+high = max_hr * 0.85
+
+print("Safe Range:", int(low), "to", int(high))
+
